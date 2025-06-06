@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c7x2b6v2s0k41"]
+
+[node name="bird" type="RigidBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

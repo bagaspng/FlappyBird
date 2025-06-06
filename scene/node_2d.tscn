@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://clb3u3s7xflvn"]
+
+[ext_resource type="Texture2D" uid="uid://drvnfuadsktdf" path="res://assets/background_day.png" id="1_gbcfu"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2.36806, 2.38672)
+texture = ExtResource("1_gbcfu")
+centered = false
