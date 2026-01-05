@@ -2,11 +2,9 @@
 
 > Recreasi klasik game FlappyBird yang dibuat menggunakan Godot Engine 4.2 dengan GDScript untuk pembelajaran game development
 
-[![GDScript](https://img.shields.io/badge/GDScript-100%25-478cbf? style=flat-square&logo=godot-engine&logoColor=white)](https://github.com/bagaspng/FlappyBird)
+[![GDScript](https://img.shields.io/badge/GDScript-100%25-478cbf?style=flat-square&logo=godot-engine&logoColor=white)](https://github.com/bagaspng/FlappyBird)
 [![Godot Engine](https://img.shields.io/badge/Godot-4.2-blue?style=flat-square&logo=godot-engine&logoColor=white)](https://godotengine.org/)
 [![Game Development](https://img.shields.io/badge/Category-Game%20Development-success?style=flat-square&logo=gamepad&logoColor=white)](https://github.com/bagaspng/FlappyBird)
-[![Mobile Game](https://img.shields.io/badge/Platform-Mobile%20Ready-orange?style=flat-square&logo=android&logoColor=white)](https://github.com/bagaspng/FlappyBird)
-[![License](https://img.shields.io/badge/License-MIT-blue. svg?style=flat-square)](LICENSE)
 
 ## 📋 Deskripsi
 
@@ -34,26 +32,6 @@ FlappyBird adalah recreasi dari game mobile viral yang dibuat menggunakan **Godo
 
 ## 🎯 Game Mechanics
 
-### 🐦 **Bird Controller**
-
-```gdscript
-# Core bird mechanics
-extends CharacterBody2D
-
-@export var gravity = 1500
-@export var jump_force = -400
-
-func _physics_process(delta):
-    # Apply gravity
-    velocity. y += gravity * delta
-    
-    # Handle flap input
-    if Input. is_action_just_pressed("flap"):
-        velocity.y = jump_force
-    
-    # Move bird
-    move_and_slide()
-```
 
 ### 🔄 **Finite State Machine**
 
@@ -76,23 +54,6 @@ func set_state(new_state):
         State. DEAD:
             # Game over state
             on_dead_enter()
-```
-
-### 📐 **Procedural Pipe Generation**
-
-```gdscript
-# Infinite pipe spawning system
-signal next_pipe(distance:  int)
-
-func spawn_pipe():
-    var pipe_scene = preload("res://scenes/Pipe.tscn")
-    var new_pipe = pipe_scene.instantiate()
-    
-    # Random gap positioning
-    var gap_y = randf_range(-200, 200)
-    new_pipe.position = Vector2(spawn_x, gap_y)
-    
-    add_child(new_pipe)
 ```
 
 ## 🚀 Instalasi & Setup
